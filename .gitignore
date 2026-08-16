@@ -1,0 +1,6 @@
+# VS Code
+.vscode/
+
+# C++ compiled files
+*.exe
+*.out
