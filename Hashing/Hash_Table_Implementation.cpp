@@ -7,8 +7,9 @@ private:
 
 public:
     HashTable() {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 10; i++) {
             table[i] = -1;
+        }
     }
 
     void insert(int key) {
@@ -23,16 +24,13 @@ public:
 
     bool search(int key) {
         int index = key % 10;
-        int start = index;
 
         while (table[index] != -1) {
-            if (table[index] == key)
+            if (table[index] == key) {
                 return true;
+            }
 
             index = (index + 1) % 10;
-
-            if (index == start)
-                break;
         }
 
         return false;
@@ -53,14 +51,22 @@ int main() {
     ht.insert(25);
     ht.insert(35);
 
+    cout << "Hash Table:" << endl;
     ht.display();
 
-    cout << "Search 25: ";
+    cout << endl;
 
-    if (ht.search(25))
-        cout << "Found" << endl;
-    else
-        cout << "Not Found" << endl;
+    if (ht.search(25)) {
+        cout << "25 Found" << endl;
+    } else {
+        cout << "25 Not Found" << endl;
+    }
+
+    if (ht.search(50)) {
+        cout << "50 Found" << endl;
+    } else {
+        cout << "50 Not Found" << endl;
+    }
 
     return 0;
 }
