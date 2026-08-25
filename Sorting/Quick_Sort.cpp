@@ -24,10 +24,10 @@ int partitionArray(int arr[], int low, int high) {
 
 void quickSort(int arr[], int low, int high) {
     if (low < high) {
-        int pivot = partitionArray(arr, low, high);
+        int pivotIndex = partitionArray(arr, low, high);
 
-        quickSort(arr, low, pivot - 1);
-        quickSort(arr, pivot + 1, high);
+        quickSort(arr, low, pivotIndex - 1);
+        quickSort(arr, pivotIndex + 1, high);
     }
 }
 
@@ -38,6 +38,7 @@ int main() {
     quickSort(arr, 0, n - 1);
 
     cout << "Sorted Array: ";
+
     for (int i = 0; i < n; i++)
         cout << arr[i] << " ";
 
