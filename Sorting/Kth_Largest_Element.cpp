@@ -16,7 +16,7 @@ int main() {
         }
     }
 
-    cout << "Kth Largest Element: " << arr[n - k] << endl;
+    cout << "Kth Largest Element: " << arr[n - k];
 
     return 0;
 }

@@ -14,7 +14,6 @@ int main() {
             int temp = arr[low];
             arr[low] = arr[mid];
             arr[mid] = temp;
-
             low++;
             mid++;
         }
@@ -25,17 +24,13 @@ int main() {
             int temp = arr[mid];
             arr[mid] = arr[high];
             arr[high] = temp;
-
             high--;
         }
     }
 
     cout << "Sorted Array: ";
-
     for (int i = 0; i < n; i++)
         cout << arr[i] << " ";
-
-    cout << endl;
 
     return 0;
 }

@@ -16,7 +16,7 @@ int main() {
         }
     }
 
-    cout << "Kth Smallest Element: " << arr[k - 1] << endl;
+    cout << "Kth Smallest Element: " << arr[k - 1];
 
     return 0;
 }

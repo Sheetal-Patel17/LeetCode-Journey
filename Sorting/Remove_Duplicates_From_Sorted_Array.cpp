@@ -14,14 +14,13 @@ int main() {
         }
     }
 
-    cout << "Array after removing duplicates: ";
+    cout << "Unique Array: ";
 
     for (int i = 0; i <= j; i++)
         cout << arr[i] << " ";
 
     cout << endl;
-
-    cout << "Number of unique elements: " << j + 1 << endl;
+    cout << "Number of unique elements: " << j + 1;
 
     return 0;
 }

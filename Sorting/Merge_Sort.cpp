@@ -3,12 +3,13 @@ using namespace std;
 
 void merge(int arr[], int left, int mid, int right) {
     int temp[100];
+
     int i = left;
     int j = mid + 1;
     int k = left;
 
     while (i <= mid && j <= right) {
-        if (arr[i] <= arr[j])
+        if (arr[i] < arr[j])
             temp[k++] = arr[i++];
         else
             temp[k++] = arr[j++];
@@ -43,11 +44,8 @@ int main() {
     mergeSort(arr, 0, n - 1);
 
     cout << "Sorted Array: ";
-
     for (int i = 0; i < n; i++)
         cout << arr[i] << " ";
-
-    cout << endl;
 
     return 0;
 }
