@@ -12,7 +12,7 @@ int main() {
     int k = 0;
 
     while (i < 3 && j < 3) {
-        if (arr1[i] < arr2[j])
+        if (arr1[i] <= arr2[j])
             result[k++] = arr1[i++];
         else
             result[k++] = arr2[j++];
