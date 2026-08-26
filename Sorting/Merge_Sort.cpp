@@ -33,7 +33,6 @@ void mergeSort(int arr[], int left, int right) {
 
     mergeSort(arr, left, mid);
     mergeSort(arr, mid + 1, right);
-
     merge(arr, left, mid, right);
 }
 
@@ -44,7 +43,6 @@ int main() {
     mergeSort(arr, 0, n - 1);
 
     cout << "Sorted Array: ";
-
     for (int i = 0; i < n; i++)
         cout << arr[i] << " ";
 
