@@ -24,4 +24,4 @@ int main() {
     cout << "Minimum index: " << left << endl;
 
     return 0;
-}
+}   
