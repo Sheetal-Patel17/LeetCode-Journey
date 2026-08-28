@@ -26,7 +26,7 @@ int main() {
 
     cout << "Merged Array: ";
 
-    for (int x = 0; x < k; x++)
+    for (int x = 0; x < 6; x++)
         cout << result[x] << " ";
 
     return 0;
