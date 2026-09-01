@@ -12,7 +12,6 @@ int main() {
 
     cout << endl;
 
-    cout << "For index i:" << endl;
     cout << "Left Child = 2*i + 1" << endl;
     cout << "Right Child = 2*i + 2" << endl;
     cout << "Parent = (i-1)/2" << endl;

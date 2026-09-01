@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void heapifyDown(int arr[], int n, int i) {
+void heapify(int arr[], int n, int i) {
     int largest = i;
 
     int left = 2 * i + 1;
@@ -18,7 +18,7 @@ void heapifyDown(int arr[], int n, int i) {
         arr[i] = arr[largest];
         arr[largest] = temp;
 
-        heapifyDown(arr, n, largest);
+        heapify(arr, n, largest);
     }
 }
 
@@ -26,7 +26,7 @@ void deleteRoot(int arr[], int &n) {
     arr[0] = arr[n - 1];
     n--;
 
-    heapifyDown(arr, n, 0);
+    heapify(arr, n, 0);
 }
 
 int main() {

@@ -1,8 +1,9 @@
 #include <iostream>
 using namespace std;
 
-void heapifyDown(int arr[], int n, int i) {
+void heapify(int arr[], int n, int i) {
     int smallest = i;
+
     int left = 2 * i + 1;
     int right = 2 * i + 2;
 
@@ -17,7 +18,7 @@ void heapifyDown(int arr[], int n, int i) {
         arr[i] = arr[smallest];
         arr[smallest] = temp;
 
-        heapifyDown(arr, n, smallest);
+        heapify(arr, n, smallest);
     }
 }
 
@@ -26,7 +27,7 @@ int main() {
     int n = 5;
 
     for (int i = n / 2 - 1; i >= 0; i--)
-        heapifyDown(arr, n, i);
+        heapify(arr, n, i);
 
     cout << "Min Heap: ";
 
