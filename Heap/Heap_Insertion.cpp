@@ -3,6 +3,7 @@ using namespace std;
 
 void insertMaxHeap(int arr[], int &n, int value) {
     arr[n] = value;
+
     int i = n;
     n++;
 
