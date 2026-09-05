@@ -1,32 +1,16 @@
 #include <iostream>
 using namespace std;
 
-int graph[5][5] =
-{
-    {0, 1, 1, 0, 0},
-    {1, 0, 1, 0, 0},
-    {1, 1, 0, 1, 0},
-    {0, 0, 1, 0, 1},
-    {0, 0, 0, 1, 0}
-};
+bool dfs(int graph[5][5], bool visited[], int node, int parent) {
+    visited[node] = true;
 
-int visited[5] = {0};
-
-bool DFS(int node, int parent)
-{
-    visited[node] = 1;
-
-    for (int i = 0; i < 5; i++)
-    {
-        if (graph[node][i] == 1)
-        {
-            if (visited[i] == 0)
-            {
-                if (DFS(i, node))
+    for (int i = 0; i < 5; i++) {
+        if (graph[node][i] == 1) {
+            if (!visited[i]) {
+                if (dfs(graph, visited, i, node))
                     return true;
             }
-            else if (i != parent)
-            {
+            else if (i != parent) {
                 return true;
             }
         }
@@ -35,24 +19,26 @@ bool DFS(int node, int parent)
     return false;
 }
 
-int main()
-{
+int main() {
+    int graph[5][5] = {0};
+
+    graph[0][1] = graph[1][0] = 1;
+    graph[1][2] = graph[2][1] = 1;
+    graph[2][0] = graph[0][2] = 1;
+
+    bool visited[5] = {false};
+
     bool cycle = false;
 
-    for (int i = 0; i < 5; i++)
-    {
-        if (visited[i] == 0)
-        {
-            if (DFS(i, -1))
-            {
-                cycle = true;
-                break;
-            }
+    for (int i = 0; i < 5; i++) {
+        if (!visited[i] && dfs(graph, visited, i, -1)) {
+            cycle = true;
+            break;
         }
     }
 
     if (cycle)
-        cout << "Cycle Found";
+        cout << "Cycle Exists";
     else
         cout << "No Cycle";
 
