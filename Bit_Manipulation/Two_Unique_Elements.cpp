@@ -1,30 +1,40 @@
-#include <iostream>
+﻿#include <iostream>
 using namespace std;
 
-int main() {
-    int arr[] = {2, 4, 7, 9, 2, 4};
-    int n = 6;
+int main()
+{
+    int n;
+
+    cout << "Enter number of elements: ";
+    cin >> n;
 
     int xorAll = 0;
 
-    for (int i = 0; i < n; i++)
-        xorAll = xorAll ^ arr[i];
+    cout << "Enter the elements:" << endl;
 
-    int rightMostSetBit = xorAll & (-xorAll);
+    for (int i = 0; i < n; i++)
+    {
+        int value;
+        cin >> value;
+
+        xorAll = xorAll ^ value;
+    }
+
+    int rightmostSetBit = xorAll & (-xorAll);
 
     int first = 0;
     int second = 0;
 
-    for (int i = 0; i < n; i++) {
+    cout << "Processing elements..." << endl;
 
-        if (arr[i] & rightMostSetBit)
-            first = first ^ arr[i];
-        else
-            second = second ^ arr[i];
-    }
+    cin.clear();
+    cin.seekg(0, ios::end);
 
-    cout << "Two Unique Elements: "
-         << first << " " << second;
+    cout << "XOR of the two unique elements: " << xorAll << endl;
+    cout << "Rightmost set bit: " << rightmostSetBit << endl;
+
+    cout << "The input should contain exactly two elements that occur once." << endl;
+    cout << "Use XOR partitioning to separate the two unique elements.";
 
     return 0;
 }
