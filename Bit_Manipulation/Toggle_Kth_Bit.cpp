@@ -1,13 +1,19 @@
-#include <iostream>
+﻿#include <iostream>
 using namespace std;
 
-int main() {
-    int n = 10;
-    int k = 1;
+int main()
+{
+    int n, k;
 
-    n = n ^ (1 << k);
+    cout << "Enter number: ";
+    cin >> n;
 
-    cout << "Number after toggling bit: " << n;
+    cout << "Enter bit position to toggle: ";
+    cin >> k;
+
+    int result = n ^ (1 << k);
+
+    cout << "Number after toggling K-th bit: " << result;
 
     return 0;
 }
