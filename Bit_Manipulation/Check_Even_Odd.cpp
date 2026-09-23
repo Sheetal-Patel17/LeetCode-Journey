@@ -1,13 +1,17 @@
-#include <iostream>
+﻿#include <iostream>
 using namespace std;
 
-int main() {
-    int n = 17;
+int main()
+{
+    int n;
 
-    if (n & 1)
-        cout << n << " is Odd";
+    cout << "Enter a number: ";
+    cin >> n;
+
+    if ((n & 1) == 0)
+        cout << "Even";
     else
-        cout << n << " is Even";
+        cout << "Odd";
 
     return 0;
 }
