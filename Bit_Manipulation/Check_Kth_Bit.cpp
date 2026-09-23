@@ -1,14 +1,20 @@
-#include <iostream>
+﻿#include <iostream>
 using namespace std;
 
-int main() {
-    int n = 10;
-    int k = 1;
+int main()
+{
+    int n, k;
 
-    if (n & (1 << k))
-        cout << "Kth Bit is Set";
+    cout << "Enter number: ";
+    cin >> n;
+
+    cout << "Enter bit position: ";
+    cin >> k;
+
+    if ((n & (1 << k)) != 0)
+        cout << "K-th bit is SET";
     else
-        cout << "Kth Bit is Not Set";
+        cout << "K-th bit is NOT SET";
 
     return 0;
 }
