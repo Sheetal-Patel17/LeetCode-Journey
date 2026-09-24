@@ -19,3 +19,11 @@ The problems are organized to practice individual bit operations before combinin
 ## Complexity
 
 Most bit operations used in these problems run in constant time, while counting and scanning operations may depend on the number of bits processed.
+
+## Practice Checklist
+
+- [x] Basic bit operations
+- [x] Set, clear, and toggle operations
+- [x] Set-bit counting
+- [x] XOR problems
+- [x] Power-of-two check
