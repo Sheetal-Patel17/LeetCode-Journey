@@ -28,3 +28,5 @@ int main()
 
     return 0;
 }
+
+// Practice note: XOR is useful here because equal values cancel each other, leaving the missing number.
