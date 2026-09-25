@@ -38,3 +38,5 @@ int main()
 
     return 0;
 }
+
+// Practice note: XOR can separate two unique values by using the lowest set bit of their XOR result as a distinguishing mask.
