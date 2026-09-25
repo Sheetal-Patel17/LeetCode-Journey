@@ -15,3 +15,5 @@ int main()
 
     return 0;
 }
+
+// Practice note: a positive power of two has exactly one set bit, so n > 0 and (n & (n - 1)) == 0 is a useful test.
