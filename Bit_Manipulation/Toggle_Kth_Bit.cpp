@@ -17,3 +17,5 @@ int main()
 
     return 0;
 }
+
+// Practice note: XOR toggles a bit because XOR with 1 changes the bit while XOR with 0 keeps it unchanged.
