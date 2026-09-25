@@ -30,3 +30,5 @@ int main()
 }
 
 // Practice note: XOR is useful here because equal values cancel each other, leaving the missing number.
+
+// XOR cancellation lets matching values cancel without sorting or an extra array.
