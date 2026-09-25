@@ -17,3 +17,5 @@ int main()
 }
 
 // Practice note: checking the least significant bit with (n & 1) is the standard O(1) way to determine whether an integer is even or odd.
+
+// Example: for n = 7, (n & 1) is 1, so the number is odd.
