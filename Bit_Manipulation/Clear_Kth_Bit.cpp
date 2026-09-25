@@ -19,3 +19,5 @@ int main()
 }
 
 // Practice note: clearing the kth bit can be done with n & ~(1 << k), which changes only the selected bit.
+
+// The complemented mask preserves other bits while changing the selected bit to 0.
