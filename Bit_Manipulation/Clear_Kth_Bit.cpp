@@ -17,3 +17,5 @@ int main()
 
     return 0;
 }
+
+// Practice note: clearing the kth bit can be done with n & ~(1 << k), which changes only the selected bit.
