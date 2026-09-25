@@ -18,3 +18,5 @@ int main()
 
     return 0;
 }
+
+// Practice note: use a mask (1 << k) and AND it with the number to check whether the kth bit is set.
