@@ -19,3 +19,5 @@ int main()
 
     return 0;
 }
+
+// Practice note: counting set bits focuses on the binary representation and can be optimized with n & (n - 1), which removes one set bit at a time.
