@@ -17,3 +17,5 @@ int main()
 
     return 0;
 }
+
+// Practice note: setting the kth bit uses OR with a mask: n | (1 << k).
