@@ -24,3 +24,5 @@ int main()
 
     return 0;
 }
+
+// Practice note: XOR works for finding a unique element because x ^ x becomes zero and x ^ 0 remains x.
