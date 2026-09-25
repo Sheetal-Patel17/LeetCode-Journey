@@ -1,13 +1,21 @@
-#include <iostream>
+﻿#include <iostream>
 using namespace std;
 
-int main() {
-    int n = 17;
+int main()
+{
+    int n;
 
-    if (n & 1)
-        cout << n << " is Odd";
+    cout << "Enter a number: ";
+    cin >> n;
+
+    if ((n & 1) == 0)
+        cout << "Even";
     else
-        cout << n << " is Even";
+        cout << "Odd";
 
     return 0;
 }
+
+// Practice note: checking the least significant bit with (n & 1) is the standard O(1) way to determine whether an integer is even or odd.
+
+// Example: for n = 7, (n & 1) is 1, so the number is odd.
